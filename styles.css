@@ -410,6 +410,7 @@ nav a:hover {
     height: auto;
 }
 
+
 /* ===== RESPONSIVE ===== */
 
 
@@ -551,6 +552,9 @@ nav a:hover {
 
 
 @media (max-width: 480px) {
+     .home-img img {
+        content: url("img/homeresponsive.jpg");
+    }
     .home-img h1 {
         font-size: 2.2rem;
         letter-spacing: 1px;
@@ -638,9 +642,29 @@ nav a:hover {
     }
 }
 
+/* Cambio de imagen para celulares*/
+@media (max-width: 768px) {
 
+     .home-img img {
+        content: url("img/homeresponsive.jpg");
+    }
 
-
+    .home-img h1 {
+        top: 42%;  
+    }
+    .home-img {
+        height: 80vh;  
+        min-height: auto;
+    }
+    
+    .home-img img {
+        object-position: center 30%; 
+    }
+    
+    .home-img .arrow-down {
+        bottom: 25px;
+    }
+}
 
 
 
