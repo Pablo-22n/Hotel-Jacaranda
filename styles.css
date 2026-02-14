@@ -1,0 +1,647 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    background-color: #F5F1EC;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #8a6d3b;
+}
+
+/* SECCIÓN PRINCIPAL CON IMAGEN */
+.home-img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.7);
+}
+
+.home-img h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 4.5rem;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 700;
+    padding: 20px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+/* Sección de presentación */
+.presentacion {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 80px 20px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.hotel_img {
+    flex: 1;
+    min-width: 300px;
+    order: 1;
+}
+
+.hotel_img img {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+}
+
+/* FLECHA HACIA ABAJO */
+.home-img .arrow-down {
+    position: absolute;
+    bottom: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 4rem;  
+    font-weight: 900; 
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    z-index: 10;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    backdrop-filter: blur(2px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Animación de la flecha */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-20px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+
+.informacion {
+    flex: 1;
+    min-width: 300px;
+    padding: 0;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.contenido-interno {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.informacion h2 {
+    color: #5a4a3a;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.descripcion {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: justify;
+}
+
+/* Información de contacto */
+.info-contacto {
+    background-color: transparent;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.info-contacto h3 {
+    color: #5a4a3a;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.contacto-item:last-child {
+    margin-bottom: 0;
+}
+
+.icono {
+    font-size: 1.2rem;
+    margin-right: 12px;
+    margin-top: 3px;
+    min-width: 25px;
+}
+
+.contacto-item div {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Contenedor botón principal */
+.contenedor-boton {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 60px;
+    padding: 0 20px;
+    text-align: center;
+    height: 100px;
+}
+
+.btn-reservar {
+    display: inline-block;
+    background-color: #8a6d3b;
+    color: white;
+    padding: 16px 40px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    width: auto;
+    min-width: 250px;
+    max-width: 350px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-reservar:hover {
+    background-color: #7a5d2b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(138, 109, 59, 0.4);
+}
+
+/* SECCIÓN HABITACIONES */
+.habitaciones h4 {
+    text-align: center;
+    font-size: 40px;
+    height: 160px;
+    line-height: 160px;
+    margin: 0;
+    color: #5a4a3a;
+}
+
+.habitaciones .subtitulo-habitaciones {
+    text-align: center;
+    font-size: 25px;
+    color: #6a5a4a;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.habitaciones .row {
+    width: 80%;
+    margin: 0 auto 50px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.habitaciones .row:last-child {
+    margin-bottom: 0;
+}
+
+.habitaciones .col-md-6 {
+    background-color: #F5F1EC;
+    height: 530px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.habitaciones .col-md-6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.habitaciones .recuadro {
+    padding: 40px;
+    width: 100%;
+    background: transparent;
+    border: none;
+}
+
+.habitaciones .box_habitacion {
+    text-align: center;
+    width: 100%;
+}
+
+.habitaciones .box_habitacion h5 {
+    margin-bottom: 25px;
+    font-size: 35px;
+    color: #4a3a2a;
+    font-weight: 500;
+}
+
+/* ESTILOS HABITACIONES CON ICONOS */
+.habitaciones .box_habitacion .capacidad {
+    color: #8a6d3b;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px dashed #d4c9bc;
+    padding-bottom: 12px;
+}
+
+.habitaciones .box_habitacion .capacidad i {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.habitaciones .box_habitacion .servicio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: #5a4a3a;
+}
+
+.habitaciones .box_habitacion .servicio i {
+    color: #8a6d3b;
+    width: 24px;
+    font-size: 1.1rem;
+    margin-right: 12px;
+    text-align: center;
+}
+
+.habitaciones .box_habitacion .servicio span {
+    color: #5a4a3a;
+    font-size: 1rem;
+}
+/* Para los iconos PNG en servicios */
+.habitaciones .box_habitacion .servicio .icono-servicio {
+    width: 18px;
+    height: 24px;
+    margin-right: 12px;
+    object-fit: contain;
+    display: inline-block;
+    color: #5a4a3a;
+}
+
+/* Si el icono viene muy grande o muy chico, ajustalo */
+
+/* BOTÓN RESERVAR HABITACIONES */
+.habitaciones .box_habitacion .btn-reservar-small {
+    display: inline-block;
+    background-color: #8a6d3b;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    border-radius: 3px;
+    margin-top: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    min-width: 140px;
+}
+
+.habitaciones .box_habitacion .btn-reservar-small:hover {
+    background-color: #7a5d2b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(138, 109, 59, 0.3);
+}
+
+
+.habitaciones .box_habitacion .boton-container:before,
+.habitaciones .box_habitacion .btn-reservar-small:before {
+    content: none !important;
+    display: none;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== RESPONSIVE ===== */
+
+
+@media (max-width: 1024px) {
+    .home-img h1 {
+        font-size: 3.8rem;
+    }
+    
+    .informacion h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hotel_img img,
+    .informacion {
+        height: 450px;
+    }
+    
+    .habitaciones .col-md-6 {
+        height: 450px;
+    }
+    
+    .habitaciones .box_habitacion h5 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-img h1 {
+        font-size: 3rem;
+        letter-spacing: 2px;
+        padding: 15px;
+    }
+
+    .presentacion {
+        flex-direction: column;
+        gap: 40px;
+        margin: 40px auto;
+        padding-top: 40px;
+    }
+    
+    .hotel_img, .informacion {
+        order: initial;
+        height: auto !important;
+    }
+    
+    .hotel_img img {
+        height: 400px;
+    }
+    
+    .informacion {
+        height: auto;
+    }
+    
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    
+    .btn-reservar {
+        padding: 14px 30px;
+        font-size: 1.1rem;
+        min-width: 220px;
+        width: 90%;
+        max-width: none;
+    }
+    
+  
+    .habitaciones h4 {
+        font-size: 32px;
+        height: 120px;
+        line-height: 120px;
+    }
+    
+    .habitaciones .subtitulo-habitaciones {
+        font-size: 1rem;
+        margin-top: -10px;
+        margin-bottom: 30px;
+        padding: 0 20px;
+    }
+    
+    .habitaciones .row {
+        width: 90%;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    
+    .habitaciones .col-md-6 {
+        height: 400px;
+        width: 100%;
+    }
+    
+    .habitaciones .recuadro {
+        padding: 30px;
+        margin-top: 20px;
+    }
+    
+    .habitaciones .box_habitacion h5 {
+        font-size: 28px;
+    }
+    
+    /* ORDEN CORRECTO: IMAGEN ARRIBA, TEXTO ABAJO */
+    .habitaciones .col-md-6:has(img) {
+        order: 1;
+    }
+    
+    .habitaciones .col-md-6:has(.recuadro) {
+        order: 2;
+    }
+    
+    .habitaciones .col-md-6 img {
+        margin-bottom: 0;
+    }
+    
+
+    .habitaciones .box_habitacion .servicio i {
+        width: 20px;
+        font-size: 1rem;
+    }
+    
+    .habitaciones .box_habitacion .servicio span {
+        font-size: 0.95rem;
+    }
+    
+    .habitaciones .box_habitacion .btn-reservar-small {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+        min-width: 130px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .home-img h1 {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+    
+    .hotel_img img {
+        height: 300px;
+    }
+    
+    .informacion h2 {
+        font-size: 1.6rem;
+    }
+    
+    .habitaciones h4 {
+        font-size: 28px;
+        height: 100px;
+        line-height: 100px;
+    }
+    
+    .habitaciones .col-md-6 {
+        height: 350px;
+    }
+    
+    .habitaciones .recuadro {
+        padding: 20px;
+    }
+    
+    .habitaciones .box_habitacion h5 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    .habitaciones .box_habitacion div {
+        font-size: 0.95rem;
+    }
+    
+    .btn-reservar {
+        padding: 12px 25px;
+        font-size: 1rem;
+        min-width: 200px;
+        width: 95%;
+    }
+    
+    .contenedor-boton {
+        margin: 30px auto 50px;
+    }
+}
+
+/* Pantallas muy grandes (1600px+) */
+@media (min-width: 1600px) {
+    .home-img h1 {
+        font-size: 5.5rem;
+    }
+    
+    .hotel_img img,
+    .informacion {
+        height: 550px;
+    }
+    
+    .informacion h2 {
+        font-size: 2.5rem;
+    }
+    
+    .descripcion,
+    .contacto-item div {
+        font-size: 1.2rem;
+    }
+    
+    .habitaciones .col-md-6 {
+        height: 600px;
+    }
+    
+    .habitaciones .box_habitacion h5 {
+        font-size: 40px;
+    }
+    
+    .habitaciones .box_habitacion div {
+        font-size: 1.2rem;
+    }
+    
+    .btn-reservar {
+        padding: 18px 45px;
+        font-size: 1.3rem;
+        min-width: 300px;
+    }
+}
+
+
+
+
+
+
+
+
